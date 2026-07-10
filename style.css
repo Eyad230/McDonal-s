@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  border: #ffffff 3px solid;
+  border-radius: 10px;
+  height: 60px;
+  background: #e21414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.side-menu {
+  border: #000000 3px solid;
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  transition: 0.4s;
+  padding-top: 80px;
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+.side-menu a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 22px;
+}
+
+.side-menu a:hover {
+  color: #ffffff;
+  background: #1d1c1c;
+  transition: 0.3s;
+}
+.logo {
+  height: 40px;
+  width: auto;
+}
+.logo-2 {
+  margin-top: 20px;
+  width: 85%;
+  max-height: 600px;
+}
+div .logo-2 {
+  display: block;
+  margin: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 55px;
+}
+
+h1 {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logo-2 {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  padding-top: 80px;
+  transition: 0.3s;
+}
+
+.side-menu a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 45px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    font-size: 25px;
+  }
+
+  .logo-2 {
+    border-radius: 0;
+    margin: 0;
+  }
+}
+.home-container {
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+.home-container a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 22px;
+  background: #e21414;
+  margin: 10px 0;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.home-container a:hover {
+  background: #1d1c1c;
+  transition: 0.3s;
+}
+.home-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

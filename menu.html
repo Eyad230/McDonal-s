@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini McDonald's Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      .cart {
+        text-align: center;
+        background: #ffc72c;
+        padding: 12px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 30px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+      }
+
+      .card h2 {
+        color: #da291c;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        color: #444;
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      button {
+        background: #ffc72c;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background: #ffb700;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="./mcdonalds.png" alt="McDonald's Logo" class="logo" />
+      <h2>McDonald's</h2>
+      <div class="menu-btn" id="menuBtn">☰</div>
+    </nav>
+    <div class="side-menu" id="menu">
+      <a href="./index.html">Home</a>
+      <a href="#">About</a>
+      <a href="./menu.html">Menu</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="cart">🛒 Cart: <span id="count">0</span> Items</div>
+
+    <div class="menu">
+      <div class="card">
+        <h2>Big Mac</h2>
+        <p class="price">$6</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>McChicken</h2>
+        <p class="price">$5</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Quarter Pounder</h2>
+        <p class="price">$7</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>French Fries</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Chicken Nuggets</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Coca-Cola</h2>
+        <p class="price">$2</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Sundae</h2>
+        <p class="price">$2</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Apple Pie</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Pepsi</h2>
+        <p class="price">$2</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Coffee</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Cheeseburger</h2>
+        <p class="price">$7</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+      <div class="card">
+        <h2>Happy Meal</h2>
+        <p class="price">$6</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Big Tasty</h2>
+        <p class="price">$8</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Double Cheeseburger</h2>
+        <p class="price">$8</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>McRoyale</h2>
+        <p class="price">$8</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Filet-O-Fish</h2>
+        <p class="price">$6</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Spicy McChicken</h2>
+        <p class="price">$6</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Chicken Burger</h2>
+        <p class="price">$5</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Mozzarella Sticks</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Hash Browns</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Orange Juice</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Milkshake</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Chocolate Sundae</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Cookie</h2>
+        <p class="price">$2</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+    </div>
+
+    <script>
+      let count = 0;
+
+      function addItem() {
+        count++;
+        document.getElementById("count").textContent = count;
+      }
+      const menuBtn = document.getElementById("menuBtn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
