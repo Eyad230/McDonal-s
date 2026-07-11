@@ -5,87 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini McDonald's Menu</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-
-      body {
-        background: #f5f5f5;
-      }
-
-      .cart {
-        position: sticky;
-        top: 0;
-        text-align: center;
-        background: #ffc72c;
-        padding: 12px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .menu {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        padding: 30px;
-      }
-
-      .card {
-        background: white;
-        border-radius: 15px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        transition: 0.3s;
-      }
-
-      .card:hover {
-        transform: translateY(-8px);
-      }
-
-      .card h2 {
-        color: #da291c;
-        margin-bottom: 10px;
-      }
-
-      .price {
-        color: #444;
-        font-size: 20px;
-        margin: 10px 0;
-      }
-
-      button {
-        background: #ffc72c;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-
-      button:hover {
-        background: #ffb700;
-      }
-      .btn {
-        position: fixed;
-        bottom: 20px;
-        margin: 20px auto;
-        background: #da291c;
-        color: white;
-      }
-      .btn2 {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #ffc72c;
-        color: black;
-      }
-    </style>
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon.png" />
   </head>
   <body>
     <nav>
@@ -95,11 +15,11 @@
     </nav>
     <div class="side-menu" id="menu">
       <a href="./index.html">Home</a>
-      <a href="#">About</a>
-      <a href="./menu.html">Menu</a>
-      <a href="#">Contact</a>
-      <br>
-      <br>
+      <a href="./About.html">About</a>
+      <a href="./menu.html">Order</a>
+      <a href="./contact.html">Contact</a>
+      <br />
+      <br />
       <a href="./menu.html">Back</a>
     </div>
     <div class="cart">🛒 Cart: <span id="count">0</span> Items</div>
@@ -247,9 +167,103 @@
         <p class="price">$2</p>
         <button onclick="addItem()">Add to Cart</button>
       </div>
+      <div class="card">
+        <h2>McFlurry</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Double Big Mac</h2>
+        <p class="price">$9</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Chicken Wrap</h2>
+        <p class="price">$5</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Ice Cream Cone</h2>
+        <p class="price">$2</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Iced Coffee</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Cheese Fries</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+      <div class="card">
+        <h2>McMuffin</h2>
+        <p class="price">$5</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Egg McMuffin</h2>
+        <p class="price">$5</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Chicken Caesar Wrap</h2>
+        <p class="price">$6</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>BBQ Chicken Burger</h2>
+        <p class="price">$6</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Double Quarter Pounder</h2>
+        <p class="price">$10</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Caramel Sundae</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Vanilla Milkshake</h2>
+        <p class="price">$4</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Hot Chocolate</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Chicken Salad</h2>
+        <p class="price">$5</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h2>Strawberry Pie</h2>
+        <p class="price">$3</p>
+        <button onclick="addItem()">Add to Cart</button>
+      </div>
     </div>
-      <button onclick="clearCart()" class="btn">Clear Cart</button>
-      <button onclick="buy()" class="btn2">Buy</button>
+    <button onclick="clearCart()" class="btn">Clear Cart</button>
+    <button onclick="buy()" class="btn2">Buy</button>
     <script>
       let count = 0;
 
