@@ -238,3 +238,10 @@ button:hover {
   background: #ffc72c;
   color: black;
 }
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e21414;
+  color: white;
+  margin-top: 20px;
+}
