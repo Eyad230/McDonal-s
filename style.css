@@ -226,7 +226,14 @@ button:hover {
 }
 .btn {
   position: fixed;
-  bottom: 20px;
+  top: 70px;
+  margin: 20px auto;
+  background: #da291c;
+  color: white;
+}
+.btn3 {
+  position: fixed;
+  bottom: 50px;
   margin: 20px auto;
   background: #da291c;
   color: white;

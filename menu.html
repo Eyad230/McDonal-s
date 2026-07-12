@@ -6,6 +6,26 @@
     <title>McDonald's Menu</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" sizes="96x96" href="./favicon.png" />
+    <style>
+      .order-card {
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 15px;
+        background: white;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .order-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .order-card p {
+        color: #e21414;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -22,320 +42,325 @@
       <br />
       <a href="./menu.html">Back</a>
     </div>
+    <div class="order-card" id="orderCard">
+      <h3>🛒 Your Order</h3>
+      <p id="orderText">No items selected yet.</p>
+    </div>
     <div class="cart">🛒 Cart: <span id="count">0</span> Items</div>
 
     <div class="menu">
       <div class="card">
         <h2>Big Mac</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Big Mac', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>McChicken</h2>
         <p class="price">$5</p>
-        <button onclick="addItem(5)">Add to Cart</button>
+        <button onclick="addItem('McChicken', 5)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Quarter Pounder</h2>
         <p class="price">$7</p>
-        <button onclick="addItem(7)">Add to Cart</button>
+        <button onclick="addItem('Quarter Pounder', 7)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>French Fries</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('French Fries', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Nuggets</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Chicken Nuggets', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Coca-Cola</h2>
         <p class="price">$2</p>
-        <button onclick="addItem(2)">Add to Cart</button>
+        <button onclick="addItem('Coca-Cola', 2)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Sundae</h2>
         <p class="price">$2</p>
-        <button onclick="addItem(2)">Add to Cart</button>
+        <button onclick="addItem('Sundae', 2)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Apple Pie</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Apple Pie', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Pepsi</h2>
         <p class="price">$2</p>
-        <button onclick="addItem(2)">Add to Cart</button>
+        <button onclick="addItem('Pepsi', 2)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Coffee</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Coffee', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Cheeseburger</h2>
         <p class="price">$7</p>
-        <button onclick="addItem(7)">Add to Cart</button>
+        <button onclick="addItem('Cheeseburger', 7)">Add to Cart</button>
       </div>
       <div class="card">
         <h2>Happy Meal</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Happy Meal', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Big Tasty</h2>
         <p class="price">$8</p>
-        <button onclick="addItem(8)">Add to Cart</button>
+        <button onclick="addItem('Big Tasty', 8)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Double Cheeseburger</h2>
         <p class="price">$8</p>
-        <button onclick="addItem()">Add to Cart</button>
+        <button onclick="addItem('Double Cheeseburger', 8)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>McRoyale</h2>
         <p class="price">$8</p>
-        <button onclick="addItem(8)">Add to Cart</button>
+        <button onclick="addItem('McRoyale', 8)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Filet-O-Fish</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Filet-O-Fish', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Spicy McChicken</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Spicy McChicken', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Burger</h2>
         <p class="price">$5</p>
-        <button onclick="addItem(5)">Add to Cart</button>
+        <button onclick="addItem('Chicken Burger', 5)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Mozzarella Sticks</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Mozzarella Sticks', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Hash Browns</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Hash Browns', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Orange Juice</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Orange Juice', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Milkshake</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Milkshake', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chocolate Sundae</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Chocolate Sundae', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Cookie</h2>
         <p class="price">$2</p>
-        <button onclick="addItem(2)">Add to Cart</button>
+        <button onclick="addItem('Cookie', 2)">Add to Cart</button>
       </div>
       <div class="card">
         <h2>McFlurry</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('McFlurry', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Double Big Mac</h2>
         <p class="price">$9</p>
-        <button onclick="addItem(9)">Add to Cart</button>
+        <button onclick="addItem('Double Big Mac', 9)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Wrap</h2>
         <p class="price">$5</p>
-        <button onclick="addItem(5)">Add to Cart</button>
+        <button onclick="addItem('Chicken Wrap', 5)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Ice Cream Cone</h2>
         <p class="price">$2</p>
-        <button onclick="addItem(2)">Add to Cart</button>
+        <button onclick="addItem('Ice Cream Cone', 2)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Iced Coffee</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Iced Coffee', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Cheese Fries</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Cheese Fries', 4)">Add to Cart</button>
       </div>
       <div class="card">
         <h2>McMuffin</h2>
         <p class="price">$5</p>
-        <button onclick="addItem(5)">Add to Cart</button>
+        <button onclick="addItem('McMuffin', 5)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Egg McMuffin</h2>
         <p class="price">$5</p>
-        <button onclick="addItem(5)">Add to Cart</button>
+        <button onclick="addItem('Egg McMuffin', 5)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Caesar Wrap</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Chicken Caesar Wrap', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>BBQ Chicken Burger</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('BBQ Chicken Burger', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Double Quarter Pounder</h2>
         <p class="price">$10</p>
-        <button onclick="addItem(10)">Add to Cart</button>
+        <button onclick="addItem('Double Quarter Pounder', 10)">
+          Add to Cart
+        </button>
       </div>
 
       <div class="card">
         <h2>Caramel Sundae</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Caramel Sundae', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Vanilla Milkshake</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Vanilla Milkshake', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Hot Chocolate</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Hot Chocolate', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Salad</h2>
         <p class="price">$5</p>
-        <button onclick="addItem(5)">Add to Cart</button>
+        <button onclick="addItem('Chicken Salad', 5)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Strawberry Pie</h2>
         <p class="price">$3</p>
-        <button onclick="addItem()">Add to Cart</button>
+        <button onclick="addItem('Strawberry Pie', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>McSpicy</h2>
         <p class="price">$7</p>
-        <button onclick="addItem(7)">Add to Cart</button>
+        <button onclick="addItem('McSpicy', 7)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Big Tasty</h2>
         <p class="price">$9</p>
-        <button onclick="addItem(9)">Add to Cart</button>
+        <button onclick="addItem('Chicken Big Tasty', 9)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Crispy Chicken Sandwich</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Crispy Chicken Sandwich', 6)">
+          Add to Cart
+        </button>
       </div>
 
       <div class="card">
         <h2>Onion Rings</h2>
         <p class="price">$4</p>
-        <button onclick="addItem(4)">Add to Cart</button>
+        <button onclick="addItem('Onion Rings', 4)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Wings</h2>
         <p class="price">$6</p>
-        <button onclick="addItem(6)">Add to Cart</button>
+        <button onclick="addItem('Chicken Wings', 6)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Apple Juice</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Apple Juice', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Brownie</h2>
         <p class="price">$3</p>
-        <button onclick="addItem(3)">Add to Cart</button>
+        <button onclick="addItem('Brownie', 3)">Add to Cart</button>
       </div>
 
       <div class="card">
         <h2>Chicken Deluxe</h2>
         <p class="price">$8</p>
-        <button onclick="addItem(8)">Add to Cart</button>
+        <button onclick="addItem('Chicken Deluxe', 8)">Add to Cart</button>
       </div>
     </div>
-    <button onclick="clearCart()" class="btn">Clear Cart</button>
+
     <button onclick="buy()" class="btn2">Buy</button>
+    <button onclick="clearOne()" class="btn3">Clear Only One</button>
+    <button onclick="clearCart()" class="btn">Clear All</button>
     <footer>
-      <p>&copy; 2026 McDonald's. All rights reserved.</p>
+      <p>
+        &copy; 2026 McDonald's. Made by
+        <a href="./portfolio/index2.html" target="_blank">Eyad Mostafa.</a>
+      </p>
     </footer>
     <script>
       let count = 0;
-
-      function addItem() {
-        count++;
-        document.getElementById("count").textContent = count;
-      }
+      let orders = [];
       let total = 0;
 
-      function addItem(price) {
+      function addItem(name, price) {
         count++;
         total += price;
 
-        document.getElementById("count").textContent = count;
-      }
-
-      function clearCart() {
-        count = 0;
-        total = 0;
+        orders.push(name);
 
         document.getElementById("count").textContent = count;
+        document.getElementById("orderText").textContent = orders.join(", ");
       }
 
       function buy() {
@@ -351,7 +376,26 @@
 
       function clearCart() {
         count = 0;
+        total = 0;
+        orders = [];
         document.getElementById("count").textContent = count;
+        document.getElementById("orderText").textContent =
+          "No items selected yet.";
+      }
+      function clearOne() {
+        if (orders.length === 0) return;
+
+        orders.pop();
+        count--;
+
+        document.getElementById("count").textContent = count;
+
+        if (orders.length === 0) {
+          document.getElementById("orderText").textContent =
+            "No items selected yet.";
+        } else {
+          document.getElementById("orderText").textContent = orders.join(", ");
+        }
       }
 
       const menuBtn = document.getElementById("menuBtn");
