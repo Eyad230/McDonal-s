@@ -1,13 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 nav {
-  border: #ffffff 3px solid;
   border-radius: 10px;
+  margin-top: 15px;
   height: 60px;
   background: #e21414;
   display: flex;
@@ -15,6 +8,7 @@ nav {
   align-items: center;
   padding: 0 20px;
   color: #ffffff;
+  box-shadow: 0 4px 10px #00000033;
 }
 
 .menu-btn {
@@ -55,6 +49,7 @@ nav {
 }
 .logo {
   height: 40px;
+  float: left;
   width: auto;
 }
 .logo-2 {
@@ -75,18 +70,6 @@ div .logo-2 {
 body {
   font-family: Arial, sans-serif;
 }
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-}
-
-.logo {
-  width: 55px;
-}
-
 h1 {
   flex: 1;
   margin-left: 15px;
@@ -170,14 +153,20 @@ h1 {
 }
 
 .cart {
+  width: 100%;
+
   position: sticky;
   top: 0;
   text-align: center;
   background: #ffc72c;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 12px;
   font-size: 20px;
   font-weight: bold;
   z-index: 5;
+  border: #00000000 3px solid;
+  border-radius: 10px;
 }
 
 .menu {
@@ -240,15 +229,47 @@ button:hover {
 }
 .btn2 {
   position: fixed;
-  bottom: 20px;
+  z-index: 3;
+  bottom: 70px;
   right: 20px;
+  padding: 20px 25px;
+  border-radius: 10px;
   background: #ffc72c;
   color: black;
+  font-weight: bold;
+  font-size: 18px;
 }
 footer {
+  position: fixed;
+  bottom: 0px;
   text-align: center;
   padding: 20px;
   background: #e21414;
   color: white;
   margin-top: 20px;
+  width: 100%;
+}
+.order-card {
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border: #ffffff 3px solid;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-card h3 {
+  margin-bottom: 10px;
+}
+
+.order-card p {
+  color: #e21414;
+  font-weight: bold;
+}
+.menu{
+  margin-top: 20px; 
+  margin-bottom: 80px;
 }
